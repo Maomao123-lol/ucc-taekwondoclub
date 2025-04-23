@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCC Taekwondo Club</title>
+    <link rel="stylesheet" href="header_footer.css">
+    <link type="image/x-icon" rel="icon" href="logo.png">
+    <style>
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            padding-top: 96px;
+            padding-bottom: 20px;
+            align-items: center;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.473);
+        }
+        
+        .news {
+            display: flex;
+            font-family: horizon;
+            font-size: 80px;
+            color: rgb(255, 255, 255);
+            text-shadow: 5px 5px #999999;
+            text-align: center;
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 500px;
+            padding: 20px;
+            margin: 20px 10px;
+            flex-wrap: wrap;
+        }
+        
+        .news-photo1, .news-photo2 {
+            width: 100%;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            border: #ff731c 1px solid;
+            border-radius: 20px;
+            max-width: 500px;
+        }
+        
+        .news-photo1 {
+            background-image: url('news1.jpg');
+            margin: 20px 0 0 0;
+        }
+        
+        .news-photo2 {
+            background-image: url('news2.jpg');
+            margin: 20px 0 0 0;
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
+            padding: 0 10px;
+        }
+        
+        .date {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            font-family: horizon;
+            font-size: 20px;
+            color: #ff731c;
+            margin: 10px 0;
+            padding-bottom: 5px;
+        }
+        
+        .news-title {
+            display: flex;
+            text-align: center;
+            font-family: horizon;
+            font-size: 28px;
+            color: #edefff;
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(255, 255, 255, 0.8), 1px 1px 0 rgba(255, 255, 255, 0.8);
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            display: flex;
+            text-align: justify;
+            width: 100%;
+            font-family: roboto;
+            font-size: 16px;
+            padding: 15px;
+            margin-top: 5px;
+            color: #ffffff;
+            border: #ff731c 1px solid;
+            border-radius: 20px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            .container2 {
+                max-width: 1200px;
+                margin: 40px auto;
+            }
+            
+            .news-photo1, .news-photo2 {
+                width: 48%;
+                height: 400px;
+                max-width: 550px;
+            }
+            
+            .content {
+                width: 48%;
+                max-width: 550px;
+                padding: 0 30px;
+            }
+            
+            .news-title {
+                font-size: 34px;
+            }
+            
+            .description {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+        }
+        
+        @media screen and (min-width: 992px) and (max-width: 1199px) {
+            .container2 {
+                max-width: 960px;
+                margin: 40px auto;
+            }
+            
+            .news-photo1, .news-photo2 {
+                width: 46%;
+                height: 380px;
+            }
+            
+            .content {
+                width: 46%;
+                padding: 0 25px;
+            }
+        }
+        
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            .container2 {
+                flex-direction: row;
+                min-height: 400px;
+                margin: 40px 20px;
+            }
+            
+            .news-photo1, .news-photo2 {
+                width: 45%;
+                height: 350px;
+            }
+            
+            .content {
+                width: 45%;
+                padding: 0 20px;
+            }
+            
+            .news-photo1 {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+            
+            .news-photo2 {
+                margin-left: 20px;
+                margin-top: 0;
+            }
+            
+            .news-title {
+                font-size: 30px;
+            }
+            
+            .description {
+                font-size: 17px;
+            }
+            
+            .news {
+                font-size: 70px;
+                text-shadow: 4px 4px #999999;
+            }
+        }
+        
+        @media screen and (min-width: 576px) and (max-width: 767px) {
+            .container2 {
+                flex-direction: column;
+                min-height: auto;
+                margin: 30px 15px;
+                padding: 15px;
+            }
+            
+            .news {
+                font-size: 60px;
+                text-shadow: 4px 4px #999999;
+            }
+            
+            .news-photo1, .news-photo2 {
+                height: 300px;
+                max-width: 450px;
+            }
+            
+            .news-title {
+                font-size: 26px;
+            }
+            
+            .description {
+                font-size: 16px;
+                padding: 12px;
+            }
+            
+            .date {
+                font-size: 18px;
+            }
+            
+            .container2:nth-child(3) {
+                flex-direction: column-reverse;
+            }
+            
+            .content {
+                padding: 10px;
+                margin-top: 10px;
+            }
+        }
+        
+        @media screen and (max-width: 575px) {
+            .news {
+                font-size: 45px;
+                text-shadow: 3px 3px #999999;
+            }
+            
+            .container1 {
+                padding-top: 80px;
+            }
+            
+            .container2 {
+                flex-direction: column;
+                min-height: auto;
+                padding: 15px 10px;
+                margin: 15px 8px;
+            }
+            
+            .news-photo1, .news-photo2 {
+                height: 250px;
+                max-width: 100%;
+            }
+            
+            .news-title {
+                font-size: 24px;
+                text-shadow: -0.5px -0.5px 0 rgba(0, 0, 0, 0.8), -0.5px 0.5px 0 rgba(255, 255, 255, 0.8), 0.5px 0.5px 0 rgba(255, 255, 255, 0.8);
+            }
+            
+            .description {
+                font-size: 15px;
+                padding: 12px;
+                line-height: 1.4;
+            }
+            
+            .date {
+                font-size: 18px;
+            }
+            
+            .container2:nth-child(3) {
+                flex-direction: column-reverse;
+            }
+            
+            .content {
+                padding: 5px;
+                margin-top: 10px;
+            }
+        }
+        
+        @media screen and (max-width: 375px) {
+            .container1 {
+                padding-top: 70px;
+            }
+            
+            .news {
+                font-size: 38px;
+                text-shadow: 2px 2px #999999;
+            }
+            
+            .container2 {
+                padding: 10px 5px;
+                margin: 10px 5px;
+            }
+            
+            .news-photo1, .news-photo2 {
+                height: 200px;
+            }
+            
+            .news-title {
+                font-size: 22px;
+            }
+            
+            .description {
+                font-size: 14px;
+                padding: 10px;
+            }
+            
+            .date {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="block">
+                <div class="logo"><a href="landingPage.html"><img src="logo.png" alt="UCC Taekwondo Logo"></a></div>
+                <div class="title"><a href="landingPage.html"><b style="color: #ff731c;">UCC </b><b>TAEKWONDO CLUB</b></a></div>
+                <div class="line2"></div>
+                <a href="landingPage.html"><div class="nav">HOME</div></a>
+                <div class="line2"></div>
+                <a href="trainingPage.html"><div class="nav">TRAINING</div></a>
+                <div class="line2"></div>
+                <a href="teamPage.html"><div class="nav">TEAM</div></a>
+                <div class="line2"></div>
+                <a href="NewsPage.html"><div class="nav">NEWS</div></a>
+                <div class="line2"></div>
+                <a href="ContactPage.html"><div class="nav">CONTACT</div></a>
+                <div class="line2"></div>
+                <a href="aboutusPage.html"><div class="nav" style="margin-right: 20px;">ABOUT US</div></a>
+                <div class="mobile-menu-btn">☰</div>
+            </div>
+
+            <div class="mobile-menu">
+                <a href="landingPage.html"><div class="mobile-nav-item">HOME</div></a>
+                <a href="trainingPage.html"><div class="mobile-nav-item">TRAINING</div></a>
+                <a href="teamPage.html"><div class="mobile-nav-item">TEAM</div></a>
+                <a href="NewsPage.html"><div class="mobile-nav-item">NEWS</div></a>
+                <a href="ContactPage.html"><div class="mobile-nav-item">CONTACT</div></a>
+                <a href="aboutusPage.html"><div class="mobile-nav-item">ABOUT US</div></a>
+            </div>
+        </nav>
+    
+        <div class="container1">
+            <div class="news">NEWS</div>
+        </div>
+    </header>
+
+    <div class="container2">
+        <div class="news-photo1"></div>
+        <div class="content">
+            <div class="date">March 31, 2025</div>
+            <div class="news-title">UCC Taekwondo North & South Campus Dual Meet!</div>
+            <div class="description">The University of Caloocan City's North and South campus Taekwondo Club held a dual meet, focusing on kyorugi and poomsae to select athletes for the upcoming Local Colleges and Universities Athletic Association (LCUAA) competition. The event highlighted skill, discipline, and sportsmanship as UCC's fighters showcased their best techniques.</div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="content">
+            <div class="date">COMING SOON!</div>
+            <div class="news-title">UCC Taekwondo Club North Campus Summer Training!</div>
+            <div class="description">The University of Caloocan City Taekwondo Club is preparing for its summer training program, aimed at refining athletes' skills in kyorugi and poomsae. While the official schedule is yet to be announced, participants can expect intensive sessions designed to enhance technique, discipline, and competitive readiness. Stay tuned for updates on training dates and registration details!</div>
+        </div>
+        <div class="news-photo2"></div>
+    </div>
+
+    <footer>
+        <div class="block2">
+            <div class="logo2">
+                <a href="https://ucc-caloocan.edu.ph/" target="_blank"><img src="ucc.png" alt="UCC Logo"></a>
+            </div>
+            <div class="subblock1">
+                <div class="note1">
+                    <a href="https://ucc-caloocan.edu.ph/" target="_blank">
+                        <div class="uni"><b>UNIVERSITY OF</b></div>
+                        <div class="city"><b>CALOOCAN CITY</b></div>
+                    </a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="logo3">
+                <a href="landingPage.html"><img src="logo.png" alt="Taekwondo Logo"></a>
+            </div>
+            <div class="subblock">
+                <div class="note2">
+                    <a href="landingPage.html"><b style="color: #ff731c;">UCC </b><b>TAEKWONDO CLUB</b></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">COPYRIGHT © 2025 UCC TAEKWONDO CLUB</div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>

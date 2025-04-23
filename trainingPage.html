@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCC Taekwondo Club</title>
+    <link rel="stylesheet" href="header_footer.css">
+    <link type="image/x-icon" rel="icon" href="logo.png">
+    <style>
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            padding-top: 96px;
+            padding-bottom: 20px;
+            align-items: center;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.473);
+        }
+        
+        .training {
+            display: flex;
+            font-family: horizon;
+            font-size: 80px;
+            color: rgb(255, 255, 255);
+            text-shadow: 5px 5px #999999;
+            text-align: center;
+        }
+        
+        .container2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 500px;
+            padding: 20px 0;
+        }
+        
+        .subtext {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0px 40px;
+            font-family: horizon_outlined;
+        }
+        
+        .subsub {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: row;
+            width: 100%;
+            max-width: 1200px;
+            font-family: horizon;
+            flex-wrap: wrap;
+        }
+        
+        .text1, .text2 {
+            flex: 1 1 400px;
+            color: rgb(255, 255, 255);
+            font-family: roboto;
+            text-align: justify;
+            padding: 20px 40px;
+            font-size: 22px;
+            min-width: 300px;
+        }
+        
+        .schedule {
+            display: flex;
+            font-family: horizon;
+            text-shadow: 5px 5px #999999;
+            font-size: 60px;
+            color: rgb(255, 255, 255);
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 30px 0 20px;
+            text-align: center;
+        }
+        
+        .north {
+            display: flex;
+            font-family: horizon_outlined;
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0px auto;
+            padding: 10px;
+            border: #ff731c 1px solid;
+            text-align: center;
+        }
+        
+        .container3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: #ff731c 1px solid;
+        }
+        
+        .sub1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        
+        .text3, .text4, .text5, .text6, .text7, .text8 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 30%;
+            min-width: 250px;
+            aspect-ratio: 3/2;
+            border: black 0.5px solid;
+            border-radius: 20px;
+            color: black;
+            overflow: hidden;
+            text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.8), -1px 1px 0 rgba(255, 255, 255, 0.8), 1px 1px 0 rgba(255, 255, 255, 0.8);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: transform 0.3s ease-in-out;
+            margin: 10px;
+        }
+        
+        .text3 {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(tuesday.jpg);
+        }
+        
+        .text4 {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(thursday.jpg);
+        }
+        
+        .text5 {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(saturday.png);
+        }
+        
+        .text6 {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(tuesdayS.jpg);
+        }
+        
+        .text7 {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(thursdayS.jpg);
+        }
+        
+        .text8 {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(saturdayS.jpg);
+        }
+        
+        .text3:hover, .text4:hover, .text5:hover {
+            color: white;
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 rgba(0, 0, 0, 0.8);
+            transform: scale(1.05);
+            box-shadow: 3px 3px 20px #003366;
+        }
+        
+        .text6:hover, .text7:hover, .text8:hover {
+            color: white;
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 rgba(0, 0, 0, 0.8);
+            transform: scale(1.05);
+            box-shadow: 3px 3px 20px #ae0d0d;
+        }
+        
+        .text3:hover {
+            background-image: url(tuesday.jpg);
+        }
+        
+        .text4:hover {
+            background-image: url(thursday.jpg);
+        }
+        
+        .text5:hover {
+            background-image: url(saturday.png);
+        }
+        
+        .text6:hover {
+            background-image: url(tuesdayS.jpg);
+        }
+        
+        .text7:hover {
+            background-image: url(thursdayS.jpg);
+        }
+        
+        .text8:hover {
+            background-image: url(saturdayS.jpg);
+        }
+        
+        .day {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 30%;
+            font-family: horizon;
+            font-size: 36px;
+            text-align: center;
+        }
+        
+        .campus {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 20%;
+            font-family: horizon;
+            font-size: 18px;
+            text-align: center;
+            padding: 0 5px;
+        }
+        
+        .time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 20%;
+            font-family: horizon;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .container4 {
+            display: flex;
+            background-color: #21212138;
+            width: 100%;
+            min-height: 90vh;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .subcon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .top, .bottom {
+            display: flex;
+            width: 100%;
+            height: 200px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            transition: all 0.5s ease;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .top {
+            background-image: url(top.png);
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .bottom {
+            background-image: url(bottom.png);
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        .left {
+            display: flex;
+            width: 95%;
+            height: 100%;
+            flex-direction: column;
+        }
+
+        .right {
+            display: flex;
+            width: 95%;
+            height: 0%;
+        }
+
+        @media (min-width: 768px) {
+            .right {
+                flex-direction: row;
+            }
+        }
+
+        .kyorugi {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            font-family: horizon;
+            font-size: 300%;
+            color: rgb(255, 255, 255);
+            text-shadow: 5px 5px #999999;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .des {
+            display: flex;
+            width: 100%;
+            height: 0%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .train {
+            display: flex;
+            margin-top: 20px;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+        }
+        
+        .train ul {
+            padding-left: 20px;
+        }
+        
+        .video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 0%;
+            height: 0%;
+            padding: 10px;
+        }
+        
+        .video video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .top.expanded, .bottom.expanded {
+            height: 500px;
+        }
+
+        .top.expanded .left, .bottom.expanded .left {
+            height: 30%;
+        }
+
+        .top.expanded .right, .bottom.expanded .right {
+            height: 70%;
+        }
+
+        .top.expanded .des, .bottom.expanded .des {
+            height: auto;
+            opacity: 1;
+            font-family: roboto;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 120%;
+            padding: 0px 40px;
+        }
+
+        .top.expanded .train, .bottom.expanded .train {
+            height: auto;
+            font-family: roboto;
+            color: white;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            font-size: 110%;
+            padding: 0px 20px;
+            margin-top: 0px;
+        }
+
+        .top.expanded .video, .bottom.expanded .video {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+
+        }
+    
+        @media (max-width: 1200px) {
+            .training {
+                font-size: 70px;
+            }
+            
+            .north {
+                font-size: 36px;
+            }
+            
+            .schedule {
+                font-size: 50px;
+            }
+            
+            .text1, .text2 {
+                font-size: 20px;
+                padding: 15px 30px;
+            }
+            
+            .day {
+                font-size: 30px;
+            }
+            
+            .kyorugi {
+                font-size: 250%;
+            }
+
+            .train {
+                padding-top: 100px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .training {
+                font-size: 60px;
+            }
+            
+            .schedule {
+                font-size: 45px;
+            }
+            
+            .north {
+                font-size: 32px;
+            }
+            
+            .text1, .text2 {
+                font-size: 18px;
+                padding: 15px 25px;
+                min-width: 250px;
+            }
+            
+            .text3, .text4, .text5, .text6, .text7, .text8 {
+                width: 45%;
+            }
+            
+            .day {
+                font-size: 28px;
+            }
+            
+            .top.expanded, .bottom.expanded {
+                height: 450px;
+            }
+            
+            .top.expanded .des, .bottom.expanded .des {
+                font-size: 100%;
+                padding: 0px 30px;
+            }
+            
+            .train {
+                padding-top: 30px;
+            }
+
+            .top.expanded .train, .bottom.expanded .train {
+                font-size: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container1 {
+                padding-top: 85px;
+            }
+            
+            .training {
+                font-size: 50px;
+                text-align: center;
+                padding: 0 15px;
+            }
+            
+            .subtext {
+                justify-content: center;
+                text-align: center;
+                font-size: 20px;
+                padding: 0 20px;
+            }
+            
+            .subtext h1 {
+                font-size: 28px;
+                margin: 10px 0;
+            }
+            
+            .text1, .text2 {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+            
+            .schedule {
+                font-size: 40px;
+            }
+            
+            .north {
+                font-size: 28px;
+                width: 95%;
+            }
+            
+            .container3 {
+                width: 95%;
+            }
+            
+            .day {
+                font-size: 24px;
+            }
+            
+            .campus, .time {
+                font-size: 16px;
+            }
+            
+            .top.expanded .right, .bottom.expanded .right {
+                flex-direction: column;
+            }
+            
+            .top.expanded, .bottom.expanded {
+                height: 600px;
+            }
+            
+            .kyorugi {
+                font-size: 200%;
+            }
+            
+            .top.expanded .des, .bottom.expanded .des {
+                padding: 0px 20px;
+            }
+            
+            .train {
+                padding-top: 100px;
+            }
+
+            .top.expanded .train, .bottom.expanded .train {
+                width: 100%;
+                margin-top: 20px;
+            }
+            
+            .top.expanded .video, .bottom.expanded .video {
+                padding-bottom: 200px;
+            }
+
+            .video {
+                width: 100%;
+                padding-top: 100px;
+            }
+            
+            .video video {
+                width: 100%;
+                max-height: 200px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container1 {
+                padding-top: 110px;
+            }
+            
+            .training {
+                font-size: 40px;
+            }
+            
+            .subtext h1 {
+                font-size: 24px;
+            }
+            
+            .text1, .text2 {
+                font-size: 15px;
+                padding: 10px 15px;
+                min-width: 200px;
+            }
+            
+            .schedule {
+                font-size: 35px;
+            }
+            
+            .north {
+                font-size: 24px;
+            }
+            
+            .text3, .text4, .text5, .text6, .text7, .text8 {
+                width: 90%;
+                min-width: 200px;
+            }
+            
+            .day {
+                font-size: 28px;
+            }
+            
+            .campus, .time {
+                font-size: 16px;
+            }
+            
+            .top.expanded, .bottom.expanded {
+                height: 650px;
+            }
+            
+            .top.expanded .left, .bottom.expanded .left {
+                height: 35%;
+            }
+            
+            .top.expanded .right, .bottom.expanded .right {
+                height: 65%;
+            }
+            
+            .kyorugi {
+                font-size: 180%;
+            }
+            
+            .top.expanded .des, .bottom.expanded .des {
+                font-size: 90%;
+                padding: 0px 15px;
+            }
+            
+            .top.expanded .train, .bottom.expanded .train {
+                font-size: 90%;
+                padding: 0px 15px;
+                margin-top: 20px;
+            }
+            
+            .top.expanded .video, .bottom.expanded .video {
+                padding-bottom: 200px;
+            }
+            
+            .train {
+                padding-top: 500px;
+            }
+
+            .train ul {
+                padding-left: 15px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .container1 {
+                padding-top: 110px;
+            }
+            
+            .training {
+                font-size: 36px;
+            }
+            
+            .subtext h1 {
+                font-size: 22px;
+            }
+            
+            .text1, .text2 {
+                font-size: 14px;
+                padding: 10px;
+            }
+            
+            .schedule {
+                font-size: 30px;
+            }
+            
+            .north {
+                font-size: 22px;
+            }
+            
+            .kyorugi {
+                font-size: 150%;
+            }
+            
+            .top.expanded .des, .bottom.expanded .des {
+                font-size: 85%;
+                padding: 0px 10px;
+            }
+
+            .train {
+                padding-top: 500px;
+            }
+            
+            .top.expanded .train, .bottom.expanded .train {
+                font-size: 85%;
+                padding: 0px 10px;
+                margin-top: 20px;
+            }
+            
+            .top.expanded .video, .bottom.expanded .video {
+                padding-bottom: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="block">
+                <div class="logo"><a href="landingPage.html"><img src="logo.png" alt="UCC Taekwondo Logo"></a></div>
+                <div class="title"><a href="landingPage.html"><b style="color: #ff731c;">UCC </b><b>TAEKWONDO CLUB</b></a></div>
+                <div class="line2"></div>
+                <a href="landingPage.html"><div class="nav">HOME</div></a>
+                <div class="line2"></div>
+                <a href="trainingPage.html"><div class="nav">TRAINING</div></a>
+                <div class="line2"></div>
+                <a href="teamPage.html"><div class="nav">TEAM</div></a>
+                <div class="line2"></div>
+                <a href="NewsPage.html"><div class="nav">NEWS</div></a>
+                <div class="line2"></div>
+                <a href="ContactPage.html"><div class="nav">CONTACT</div></a>
+                <div class="line2"></div>
+                <a href="aboutusPage.html"><div class="nav" style="margin-right: 20px;">ABOUT US</div></a>
+                <div class="mobile-menu-btn">☰</div>
+            </div>
+
+            <div class="mobile-menu">
+                <a href="landingPage.html"><div class="mobile-nav-item">HOME</div></a>
+                <a href="trainingPage.html"><div class="mobile-nav-item">TRAINING</div></a>
+                <a href="teamPage.html"><div class="mobile-nav-item">TEAM</div></a>
+                <a href="NewsPage.html"><div class="mobile-nav-item">NEWS</div></a>
+                <a href="ContactPage.html"><div class="mobile-nav-item">CONTACT</div></a>
+                <a href="aboutusPage.html"><div class="mobile-nav-item">ABOUT US</div></a>
+            </div>
+        </nav>
+    
+        <div class="container1">
+            <div class="training">TRAINING</div>
+        </div>
+    </header>
+    
+    <div class="container2">
+        <div class="subtext"><h1>WHO CAN JOIN?</h1></div>
+        <div class="subsub">
+            <div class="text1">All students, from any program and year, are welcome to join our Taekwondo training. Whether you are a beginner or experienced, this is your chance to develop strength, discipline, and confidence in a supportive environment. Train with skilled instructors, enhance your abilities, and become part of a dynamic community. Do not miss this opportunity—join us and unlock your full potential.</div>
+            <div class="text2">Lahat ng estudyante, mula sa anumang programa at taon, ay malugod na inaanyayahan na sumali sa aming pagsasanay sa Taekwondo. Maging ikaw ay baguhan o may karanasan na, ito ang pagkakataon mong mapaunlad ang iyong lakas, disiplina, at kumpiyansa sa isang suportadong kapaligiran. Makipagsanay sa mga bihasang tagapagturo, pagbutihin ang iyong kakayahan, at maging bahagi ng isang masiglang komunidad. Huwag palampasin ang pagkakataong ito—sumali na at ipamalas ang iyong tunay na potensyal.</div>
+        </div>
+    </div>
+
+    <div class="container4">
+        <div class="subcon">
+            <div class="top" onclick="toggleExpand('top')">
+                <div class="left">
+                    <div class="kyorugi">KYORUGI</div>
+                    <div class="des">Kyorugi is the combat-oriented aspect of Taekwondo, where practitioners engage in controlled sparring matches. It emphasizes speed, strategy, and precision, requiring fighters to anticipate their opponent's moves and react accordingly.</div>
+                </div>
+                <div class="right">
+                    <div class="train">
+                        <ul>
+                            <li><b>Learning techniques in motion</b> – Practicing basic movements and footwork</li>
+                            <li><b>Yaksok Kyorugi (Patternized Sparring)</b> – Training in set attack and defense sequences to understand timing and distance.</li>
+                            <li><b>Jayu Kyorugi (Free Sparring)</b> – Applying techniques in real-time combat situations, adapting to an opponent's movements.</li>
+                        </ul>
+                    </div>
+                    <div class="video">
+                        <video controls>
+                            <source src="kyorugi.mov" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom" onclick="toggleExpand('bottom')">
+                <div class="left">
+                    <div class="kyorugi">POOMSAE</div>
+                    <div class="des">Poomsae is the technical and artistic side of Taekwondo, consisting of choreographed movements that simulate combat scenarios. It helps practitioners refine their techniques, balance, and breathing control.</div>
+                </div>
+                <div class="right">
+                    <div class="train">
+                        <ul>
+                            <li><b>Memorizing movement sequences</b> – Understanding the significance of each form.</li>
+                            <li><b>Practicing footwork and stances</b> – Ensuring proper balance and execution.</li>
+                            <li><b>Controlling speed and force</b>– Adjusting movements for precision and effectiveness.</li>
+                        </ul>
+                    </div>
+                    <div class="video">
+                        <video controls>
+                            <source src="poomsae.mov" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="schedule"><b>SCHEDULE</b></div>
+    <div class="north"><b>NORTH CAMPUS</b></div>
+    <div class="container3">
+        <div class="sub1">
+            <div class="text3">
+                <div class="day">TUESDAY</div>
+                <div class="campus">Camarin Campus</div>
+                <div class="time">10:00AM-3:00PM</div>
+            </div>
+            <div class="text4">
+                <div class="day">THURSDAY</div>
+                <div class="campus">Congress Campus</div>
+                <div class="time">10:00AM-2:00PM</div>
+            </div>
+            <div class="text5">
+                <div class="day">SATURDAY</div>
+                <div class="campus">Congress Campus</div>
+                <div class="time">5:00PM-9:00PM</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="north"><b>SOUTH CAMPUS</b></div>
+    <div class="container3">
+        <div class="sub1">
+            <div class="text6">
+                <div class="day">TUESDAY</div>
+                <div class="campus">EDSA Campus</div>
+                <div class="time">7:00AM-11:00AM</div>
+            </div>
+            <div class="text7">
+                <div class="day">THURSDAY</div>
+                <div class="campus">EDSA Campus</div>
+                <div class="time">7:00AM-11:00AM</div>
+            </div>
+            <div class="text8">
+                <div class="day">SATURDAY</div>
+                <div class="campus">EDSA Campus</div>
+                <div class="time">7:00AM-11:00AM</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="block2">
+            <div class="logo2">
+                <a href="https://ucc-caloocan.edu.ph/" target="_blank"><img src="ucc.png" alt="UCC Logo"></a>
+            </div>
+            <div class="subblock1">
+                <div class="note1">
+                    <a href="https://ucc-caloocan.edu.ph/" target="_blank">
+                        <div class="uni"><b>UNIVERSITY OF</b></div>
+                        <div class="city"><b>CALOOCAN CITY</b></div>
+                    </a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="logo3">
+                <a href="landingPage.html"><img src="logo.png" alt="Taekwondo Logo"></a>
+            </div>
+            <div class="subblock">
+                <div class="note2">
+                    <a href="landingPage.html"><b style="color: #ff731c;">UCC </b><b>TAEKWONDO CLUB</b></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">COPYRIGHT © 2025 UCC TAEKWONDO CLUB</div>
+    </footer>
+
+    <script src="menu.js"></script>
+    <script>
+        function toggleExpand(target) {
+            const top = document.querySelector('.top');
+            const bottom = document.querySelector('.bottom');
+    
+            if (target === 'top') {
+                top.classList.toggle('expanded');
+                bottom.classList.remove('expanded');
+            } else {
+                bottom.classList.toggle('expanded');
+                top.classList.remove('expanded');
+            }
+        }
+    </script>
+</body>
+</html>

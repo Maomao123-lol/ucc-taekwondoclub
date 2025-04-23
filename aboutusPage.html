@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCC Taekwondo Club</title>
+    <link rel="stylesheet" href="header_footer.css">
+    <link type="image/x-icon" rel="icon" href="logo.png">
+    <style>
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            padding-top: 96px;
+            padding-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.473);
+        }
+        
+        .training {
+            display: flex;
+            font-family: horizon;
+            font-size: 80px;
+            color: rgb(255, 255, 255);
+            text-shadow: 5px 5px #999999;
+            text-align: center;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            min-height: 600px;
+            padding: 20px 10px;
+            margin-bottom: 30px;
+        }
+        
+        .subcon {
+            display: flex;
+            width: 80%;
+            min-height: 400px;
+            justify-content: center;
+            align-items: stretch;
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+        
+        .photo {
+            display: flex;
+            width: 60%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 20px 0px 0px 20px;
+            border: solid 1px #ff731c;
+        }
+        
+        .mv {
+            display: flex;
+            width: 40%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            border-radius: 0px 20px 20px 0px;
+        }
+        
+        .header {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            padding-top: 20px;
+            font-family: horizon;
+            font-size: 60px;
+            color: white;
+            text-shadow: 5px 5px #999999;
+            margin-bottom: 10px;
+        }
+        
+        .des {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            font-family: roboto;
+            font-size: 21px;
+            color: white;
+            flex-grow: 1;
+            text-shadow: 1px 1px rgb(99, 99, 99);
+        }
+        
+        @media screen and (max-width: 1200px) {
+            .subcon {
+                width: 90%;
+            }
+            
+            .header {
+                font-size: 50px;
+            }
+            
+            .des {
+                font-size: 18px;
+                padding: 15px;
+            }
+        }
+        
+        @media screen and (max-width: 992px) {
+            .training {
+                font-size: 60px;
+            }
+            
+            .header {
+                font-size: 40px;
+                text-shadow: 3px 3px #999999;
+            }
+            
+            .des {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .subcon {
+                flex-direction: column;
+                width: 90%;
+                min-height: auto;
+            }
+            
+            .photo {
+                width: 100%;
+                height: 250px;
+                border-radius: 20px 20px 0px 0px;
+            }
+            
+            .mv {
+                width: 100%;
+                border-radius: 0px 0px 20px 20px;
+                padding-bottom: 20px;
+            }
+            
+            .training {
+                font-size: 50px;
+                text-shadow: 4px 4px #999999;
+            }
+            
+            .header {
+                font-size: 36px;
+                padding-top: 15px;
+            }
+            
+            .des {
+                padding: 10px 20px 20px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .container1 {
+                padding-top: 70px;
+            }
+            
+            .training {
+                font-size: 40px;
+                text-shadow: 3px 3px #999999;
+            }
+            
+            .subcon {
+                width: 95%;
+                margin-top: 30px;
+            }
+            
+            .photo {
+                height: 200px;
+            }
+            
+            .header {
+                font-size: 32px;
+                text-shadow: 2px 2px #999999;
+            }
+            
+            .des {
+                font-size: 15px;
+                padding: 10px 15px 15px;
+            }
+            
+            .container {
+                padding: 10px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="block">
+                <div class="logo"><a href="landingPage.html"><img src="logo.png" alt="UCC Taekwondo Logo"></a></div>
+                <div class="title"><a href="landingPage.html"><b style="color: #ff731c;">UCC </b><b>TAEKWONDO CLUB</b></a></div>
+                <div class="line2"></div>
+                <a href="landingPage.html"><div class="nav">HOME</div></a>
+                <div class="line2"></div>
+                <a href="trainingPage.html"><div class="nav">TRAINING</div></a>
+                <div class="line2"></div>
+                <a href="teamPage.html"><div class="nav">TEAM</div></a>
+                <div class="line2"></div>
+                <a href="NewsPage.html"><div class="nav">NEWS</div></a>
+                <div class="line2"></div>
+                <a href="ContactPage.html"><div class="nav">CONTACT</div></a>
+                <div class="line2"></div>
+                <a href="aboutusPage.html"><div class="nav" style="margin-right: 20px;">ABOUT US</div></a>
+                <div class="mobile-menu-btn">☰</div>
+            </div>
+
+            <div class="mobile-menu">
+                <a href="landingPage.html"><div class="mobile-nav-item">HOME</div></a>
+                <a href="trainingPage.html"><div class="mobile-nav-item">TRAINING</div></a>
+                <a href="teamPage.html"><div class="mobile-nav-item">TEAM</div></a>
+                <a href="NewsPage.html"><div class="mobile-nav-item">NEWS</div></a>
+                <a href="ContactPage.html"><div class="mobile-nav-item">CONTACT</div></a>
+                <a href="aboutusPage.html"><div class="mobile-nav-item">ABOUT US</div></a>
+            </div>
+        </nav>
+    
+        <div class="container1">
+            <div class="training">ABOUT US</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="subcon">
+            <div class="photo" style="background-image: url(mission.jpg);"></div>
+            <div class="mv" style="border: solid 1px #022cff; background-image: url(missionbg.png);">
+                <div class="header">MISSION</div>
+                <div class="des">The University of Caloocan City Taekwondo Club is dedicated to developing skilled, disciplined, and respectful athletes through martial arts training. We do not train to harm others, but to cultivate sportsmanship, self-control, and personal growth. Our practice instills perseverance, humility, and teamwork, empowering students to represent UCC with integrity, excellence, and respect both in competition and in life.</div>
+            </div>
+        </div>
+
+        <div class="subcon">
+            <div class="photo" style="background-image: url(vision.jpg);"></div>
+            <div class="mv" style="border: solid 1px red; background-image: url(visionbg.png);">
+                <div class="header">VISION</div>
+                <div class="des">To be a thriving and principled Taekwondo community, where athletes train with purpose, discipline, and respect. We aim to shape individuals who embody honor, fairness, and continuous self-improvement, inspiring students to use Taekwondo's teachings as a foundation for confidence, responsibility, and leadership in all aspects of life.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="block2">
+            <div class="logo2">
+                <a href="https://ucc-caloocan.edu.ph/" target="_blank"><img src="ucc.png" alt="UCC Logo"></a>
+            </div>
+            <div class="subblock1">
+                <div class="note1">
+                    <a href="https://ucc-caloocan.edu.ph/" target="_blank">
+                        <div class="uni"><b>UNIVERSITY OF</b></div>
+                        <div class="city"><b>CALOOCAN CITY</b></div>
+                    </a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="logo3">
+                <a href="landingPage.html"><img src="logo.png" alt="Taekwondo Logo"></a>
+            </div>
+            <div class="subblock">
+                <div class="note2">
+                    <a href="landingPage.html"><b style="color: #ff731c;">UCC </b><b>TAEKWONDO CLUB</b></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">COPYRIGHT © 2025 UCC TAEKWONDO CLUB</div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>

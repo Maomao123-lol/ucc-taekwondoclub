@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCC Taekwondo Club</title>
+    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link type="image/x-icon" rel="icon" href="logo.png">
+    <style>
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 100px;
+            width: 100%;
+        }
+        
+        .text1, .text2, .text3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 95%;
+            height: 16vh;
+            text-align: center;
+            font-family: horizon, sans-serif;
+        }
+        
+        .text1 h1, .text2 h1, .text3 {
+            max-width: 100%;
+        }
+
+        .text2 {
+            background: linear-gradient(90deg, #003b77, white, white, #770000, #043e79);
+            background-size: 200%;
+            background-clip: text;
+            color: transparent;
+            animation: text-animation 6s infinite linear;
+        }
+
+        @keyframes text-animation {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 200%;
+            }
+        }
+        
+        .container2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            width: 100%;
+            background-color: #21212138;
+        }
+        
+        .text4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            font-size: 28px;
+            text-shadow: 2px 2px black;
+            width: 95%;
+            margin-bottom: 20px;
+            font-family: horizon_outlined, sans-serif;
+            text-align: center;
+        }
+        
+        .sub1 {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-direction: row;
+            width: 95%;
+            font-family: horizon, sans-serif;
+            gap: 20px;
+        }
+        
+        .text5, .text6 {
+            display: flex;
+            width: 50%;
+            min-height: 60vh;
+            color: rgb(255, 255, 255);
+            font-family: roboto, sans-serif;
+            text-align: justify;
+            font-size: clamp(16px, 2vw, 24px);
+            padding: 20px;
+            border-radius: 20px;
+            align-items: center;
+        }
+
+        .text5 {
+            background-image: url(northbg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .text6 {
+            background-image: url(southbg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .mySwiper {
+            max-width: 1200px;
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .swiper-slide {
+            font-size: 18px;
+            width: 600px;
+        }
+
+        .box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .box span {
+            position: absolute;
+            font-family: horizon;
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .swiper-pagination-bullet {
+            background: white;
+            width: 9px;
+            height: 9px;
+        }
+        
+        .promotional {
+            display: flex;
+            width: 100%;
+            height: 90vh;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 1px #ff731c;
+            padding: 20px;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(255, 115, 28, 0.3);
+        }
+        
+        .video video {
+            max-width: 100%;
+            max-height: 70vh;
+            border-radius: 5px;
+        }
+        
+        .video video::-webkit-media-controls-play-button {
+            background-color: #ff731c;
+            border-radius: 50%;
+            transform: scale(1.5);
+        }
+        
+        .video video::-webkit-media-controls-panel {
+            background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        }
+        
+        .slogan {
+            display: flex;
+            width: 100%;
+            height: 45vh;
+            background-color: #21212138;
+            margin-bottom: 50px;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            gap: 5%;
+        }
+        
+        .box1 {
+            display: flex;
+            width: 25%;
+            height: 80%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .box1:hover {
+            transform: translateY(-10px);
+        }
+        
+        .picture {
+            display: flex;
+            width: 150px;
+            height: 150px;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(28, 28, 28, 0.7);
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 115, 28, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .box1:hover .picture {
+            background-color: rgba(255, 115, 28, 0.2);
+            border-color: #ff731c;
+        }
+        
+        .picture img {
+            width: 70%;
+            transition: transform 0.3s ease;
+        }
+        
+        .box1:hover .picture img {
+            transform: scale(1.1);
+        }
+        
+        .word {
+            display: flex;
+            width: 100%;
+            height: 20%;
+            justify-content: center;
+            align-items: center;
+            font-family: horizon;
+            font-size: 40px;
+            color: white;
+            margin-top: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        @media screen and (max-width: 1600px) {
+            .text1 {
+                font-size: 100px;
+            }
+            
+            .text2 {
+                font-size: 130px;
+            }
+            
+            .text3 {
+                font-size: 100px;
+            }
+        }
+
+        @media screen and (max-width: 1300px) {
+            .text1 {
+                font-size: 90px;
+            }
+            
+            .text2 {
+                font-size: 110px;
+            }
+            
+            .text3 {
+                font-size: 90px;
+            }
+            
+            .text5, .text6 {
+                font-size: clamp(15px, 1.8vw, 22px);
+            }
+            
+            .slogan {
+                padding: 20px 5%;
+            }
+            
+            .word {
+                font-size: 32px;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .text1 {
+                font-size: 80px;
+            }
+            
+            .text2 {
+                font-size: 100px;
+            }
+            
+            .text3 {
+                font-size: 80px;
+            }
+            
+            .swiper-slide {
+                width: 500px;
+            }
+            
+            .picture {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media screen and (max-width: 1050px) {
+            .text1, .text2, .text3 {
+                height: 13vh;
+            }
+
+            .text1 {
+                font-size: 75px;
+            }
+            
+            .text2 {
+                font-size: 90px;
+            }
+            
+            .text3 {
+                font-size: 75px;
+            }
+            
+            .text5, .text6 {
+                font-size: clamp(14px, 1.7vw, 20px);
+            }
+            
+            .word {
+                font-size: 28px;
+            }
+        }
+        
+        @media screen and (max-width: 950px) {
+            .text1, .text2, .text3 {
+                height: 12.5vh;
+            }
+            
+            .text1 {
+                font-size: 70px;
+            }
+            
+            .text2 {
+                font-size: 80px;
+            }
+            
+            .text3 {
+                font-size: 70px;
+            }
+            
+            .sub1 {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .text5, .text6 {
+                width: 100%;
+                margin-bottom: 20px;
+                font-size: 18px;
+                min-height: 40vh;
+            }
+            
+            .box span {
+                font-size: 40px;
+            }
+            
+            .swiper-slide {
+                width: 450px;
+            }
+            
+            .slogan {
+                height: auto;
+                flex-wrap: wrap;
+                padding: 30px 20px;
+                gap: 20px;
+            }
+            
+            .box1 {
+                width: 30%;
+                margin-bottom: 15px;
+            }
+            
+            .picture {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .word {
+                font-size: 26px;
+                margin-top: 10px;
+            }
+        }
+        
+        @media screen and (max-width: 830px) {
+            .text1, .text2, .text3 {
+                height: 12vh;
+            }
+            
+            .text1 {
+                font-size: 65px;
+            }
+            
+            .text2 {
+                font-size: 75px;
+            }
+            
+            .text3 {
+                font-size: 65px;
+            }
+            
+            .promotional {
+                height: auto;
+                padding: 40px 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .text1 {
+                font-size: 60px;
+            }
+            
+            .text2 {
+                font-size: 70px;
+            }
+            
+            .text3 {
+                font-size: 60px;
+            }
+            
+            .box img {
+                height: 250px;
+            }
+            
+            .swiper-slide {
+                width: 400px;
+            }
+            
+            .slogan {
+                gap: 15px;
+            }
+            
+            .box1 {
+                width: 30%;
+            }
+            
+            .picture {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .word {
+                font-size: 24px;
+            }
+        }
+
+        @media screen and (max-width: 749px) {
+            .text1, .text2, .text3 {
+                height: 11vh;
+            }
+            
+            .text1 {
+                font-size: 50px;
+            }
+            
+            .text2 {
+                font-size: 60px;
+            }
+            
+            .text3 {
+                font-size: 50px;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .text1, .text2, .text3 {
+                height: 10vh;
+            }
+            
+            .text1 {
+                font-size: 40px;
+            }
+            
+            .text2 {
+                font-size: 50px;
+            }
+            
+            .text3 {
+                font-size: 40px;
+            }
+            
+            .swiper-slide {
+                width: 350px;
+            }
+            
+            .box span {
+                font-size: 35px;
+            }
+            
+            .slogan {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .box1 {
+                width: 80%;
+                margin-bottom: 25px;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 20px;
+            }
+            
+            .picture {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .word {
+                font-size: 30px;
+                margin-top: 0;
+                justify-content: flex-start;
+            }
+        }
+        
+        @media screen and (max-width: 576px) {
+            .container1 {
+                min-height: 70vh;
+                padding-top: 80px;
+            }
+            
+            .text1, .text2, .text3 {
+                height: 8vh;
+            }
+            
+            .text1 {
+                font-size: 30px;
+            }
+            
+            .text2 {
+                font-size: 40px;
+            }
+            
+            .text3 {
+                font-size: 30px;
+            }
+            
+            .text4 h1 {
+                font-size: 24px;
+            }
+            
+            .text5, .text6 {
+                padding: 15px;
+                font-size: 16px;
+            }
+            
+            .box img {
+                height: 200px;
+            }
+            
+            .swiper-slide {
+                width: 300px;
+            }
+            
+            .box span {
+                font-size: 30px;
+            }
+            
+            .sub1 {
+                gap: 15px;
+            }
+            
+            .promotional {
+                padding: 30px 15px;
+            }
+            
+            .video {
+                padding: 10px;
+            }
+            
+            .box1 {
+                width: 90%;
+            }
+            
+            .picture {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .word {
+                font-size: 26px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .container1 {
+                min-height: 60vh;
+                padding-top: 70px;
+            }
+            
+            .text1 {
+                font-size: 26px;
+                text-shadow: 3px 3px #ffc7a4;
+            }
+            
+            .text2 {
+                font-size: 34px;
+            }
+            
+            .text3 {
+                font-size: 26px;
+                text-shadow: 3px 3px #999999;
+            }
+            
+            .text4 h1 {
+                font-size: 20px;
+                text-shadow: 1px 1px black;
+            }
+            
+            .container2 {
+                min-height: auto;
+                padding: 15px 10px;
+            }
+            
+            .text5, .text6 {
+                min-height: auto;
+                padding: 15px;
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .box img {
+                height: 180px;
+            }
+            
+            .swiper-slide {
+                width: 260px;
+            }
+            
+            .box span {
+                font-size: 26px;
+                text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            }
+            
+            .box1 {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .picture {
+                width: 60px;
+                height: 60px;
+                border-width: 1px;
+            }
+            
+            .word {
+                font-size: 22px;
+            }
+        }
+        
+        @media screen and (max-width: 380px) {
+            .text1, .text2, .text3 {
+                height: 7vh;
+            }
+            
+            .text1 {
+                font-size: 22px;
+                text-shadow: 2px 2px #ffc7a4;
+            }
+            
+            .text2 {
+                font-size: 28px;
+            }
+            
+            .text3 {
+                font-size: 22px;
+                text-shadow: 2px 2px #999999;
+            }
+            
+            .text5, .text6 {
+                font-size: 14px;
+                padding: 12px;
+            }
+            
+            .swiper-slide {
+                width: 230px;
+            }
+            
+            .box img {
+                height: 160px;
+            }
+            
+            .box span {
+                font-size: 22px;
+            }
+            
+            .word {
+                font-size: 20px;
+            }
+        }
+        
+        .video-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .video-container video {
+            border-radius: 5px;
+            max-width: 100%;
+            max-height: 70vh;
+        }
+        
+        .play-button-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 115, 28, 0.7);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0.9;
+            box-shadow: 0 0 20px rgba(255, 115, 28, 0.5);
+        }
+        
+        .play-button-overlay:hover {
+            background-color: rgba(255, 115, 28, 0.9);
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 115, 28, 0.7);
+        }
+        
+        .play-button-overlay::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 0 15px 25px;
+            border-color: transparent transparent transparent white;
+            margin-left: 5px;
+        }
+        
+        @media screen and (max-width: 576px) {
+            .play-button-overlay {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .play-button-overlay::after {
+                border-width: 10px 0 10px 18px;
+                margin-left: 4px;
+            }
+        }
+        
+        @media screen and (max-width: 380px) {
+            .play-button-overlay {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .play-button-overlay::after {
+                border-width: 8px 0 8px 15px;
+                margin-left: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="block">
+                    <div class="logo"><a href="landingPage.html"><img src="logo.png" alt="UCC Taekwondo Logo"></a></div>
+                    <div class="title"><a href="landingPage.html"><b style="color: #ff731c;">UCC </b><b>TAEKWONDO CLUB</b></a></div>
+                <div class="line2"></div>
+                    <a href="landingPage.html"><div class="nav">HOME</div></a>
+                <div class="line2"></div>
+                    <a href="trainingPage.html"><div class="nav">TRAINING</div></a>
+                <div class="line2"></div>
+                    <a href="teamPage.html"><div class="nav">TEAM</div></a>
+                <div class="line2"></div>
+                    <a href="NewsPage.html"><div class="nav">NEWS</div></a>
+                <div class="line2"></div>
+                    <a href="ContactPage.html"><div class="nav">CONTACT</div></a>
+                <div class="line2"></div>
+                    <a href="aboutusPage.html"><div class="nav" style="margin-right: 20px;">ABOUT US</div></a>
+                    <div class="mobile-menu-btn">☰</div>
+                </div>
+
+            <div class="mobile-menu">
+                <a href="landingPage.html"><div class="mobile-nav-item">HOME</div></a>
+                <a href="trainingPage.html"><div class="mobile-nav-item">TRAINING</div></a>
+                <a href="teamPage.html"><div class="mobile-nav-item">TEAM</div></a>
+                <a href="NewsPage.html"><div class="mobile-nav-item">NEWS</div></a>
+                <a href="ContactPage.html"><div class="mobile-nav-item">CONTACT</div></a>
+                <a href="aboutusPage.html"><div class="mobile-nav-item">ABOUT US</div></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container1">
+        <div class="text1" style="color: #ff731c; text-shadow: 5px 5px #ffc7a4;">UCC</div>
+        <div class="text2">TAEKWONDO</div>
+        <div class="text3" style="text-shadow: 5px 5px #999999; color: white;">CLUB</div>
+    </div>
+
+    <div class="slogan">
+        <div class="box1">
+            <div class="picture"><img src="power.png" alt="power"></div>
+            <div class="word">POWER</div>
+        </div>
+        <div class="box1">
+            <div class="picture"><img src="victory.png" alt="victory"></div>
+            <div class="word">VICTORY</div>
+        </div>
+        <div class="box1">
+            <div class="picture"><img src="discipline.png" alt="discipline"></div>
+            <div class="word">DISCIPLINE</div>
+        </div>
+    </div>
+
+    <div class="promotional">
+        <div class="video">
+            <div class="video-container">
+                <video id="tkdVideo">
+                    <source src="promotional.mov" type="video/mp4">
+                    <source src="promotional.mov" type="video/ogg">
+                </video>
+                <div class="play-button-overlay" id="playButton"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container2">
+        <div class="text4">
+            <h1>WHAT IS TAEKWONDO?</h1>
+        </div>
+        <div class="sub1">
+            <div class="text5">Taekwondo is a Korean martial art that highlights powerful kicks, quick movements, and discipline. It combines physical training with mental focus and respect for others, making it more than just a form of self-defense. Practitioners learn forms (patterns), sparring, and breaking techniques, gradually earning higher belts as they progress in skill. It's also an Olympic sport and a way to stay fit and build confidence.
+            </div>
+            <div class="text6">Ang Taekwondo ay isang Koreanong martial art na pinagtutuunan ng malalakas na sipa, mabilis na galaw, at disiplina. Pinagsasama nito ang pisikal na pagsasanay at mental na konsentrasyon, pati na rin ang respeto sa iba, kaya't ito'y higit pa sa simpleng paraan ng depensa. Natututo ang mga nag-aaral nito ng mga pattern (anyo), sparring, at teknik sa pagbasag, at dahan-dahang tumataas ang antas ng kanilang belt habang sila'y sumusulong sa kasanayan. Isa rin itong Olympic na palakasan at paraan upang maging malakas, malusog, at kumpiyansa sa sarili.</div>
+        </div>
+    </div>
+    
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <a href="trainingPage.html" class="swiper-slide">
+                <div class="box">
+                    <img src="thursday.jpg" alt="Training">
+                    <span>TRAINING</span>
+                </div>
+            </a>
+            <a href="aboutusPage.html" class="swiper-slide">
+                <div class="box">
+                    <img src="news1.jpg" alt="About Us">
+                    <span>ABOUT US</span>
+                </div>
+            </a>
+            <a href="NewsPage.html" class="swiper-slide">
+                <div class="box">
+                    <img src="news2.jpg" alt="News">
+                    <span>NEWS</span>
+                </div>
+            </a>
+            <a href="teamPage.html" class="swiper-slide">
+                <div class="box">
+                    <img src="about.jpg" alt="Team">
+                    <span>TEAM</span>
+                </div>
+            </a>
+            <a href="ContactPage.html" class="swiper-slide">
+                <div class="box">
+                    <img src="contact.jpg" alt="Contact">
+                    <span>CONTACT</span>
+                </div>
+            </a>
+        </div>
+            
+        <div class="swiper-pagination"></div>
+    </div>    
+    
+    <footer>
+        <div class="block2">
+            <div class="logo2">
+                <a href="https://ucc-caloocan.edu.ph/" target="_blank"><img src="ucc.png" alt="UCC Logo"></a>
+            </div>
+            <div class="subblock1">
+                <div class="note1">
+                    <a href="https://ucc-caloocan.edu.ph/" target="_blank">
+                        <div class="uni"><b>UNIVERSITY OF</b></div>
+                        <div class="city"><b>CALOOCAN CITY</b></div>
+                    </a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="logo3">
+                <a href="landingPage.html"><img src="logo.png" alt="Taekwondo Logo"></a>
+            </div>
+            <div class="subblock">
+                <div class="note2">
+                    <a href="landingPage.html"><b style="color: #ff731c;">UCC </b><b>TAEKWONDO CLUB</b></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">COPYRIGHT © 2025 UCC TAEKWONDO CLUB</div>
+    </footer>
+    
+    <script src="menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        let mySwiper = new Swiper('.mySwiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        }
+        });
+        
+        // Custom video player functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('tkdVideo');
+            const playButton = document.getElementById('playButton');
+            
+            playButton.addEventListener('click', function() {
+                if (video.paused) {
+                    video.play();
+                    playButton.style.opacity = '0';
+                } else {
+                    video.pause();
+                    playButton.style.opacity = '0.9';
+                }
+            });
+            
+            video.addEventListener('play', function() {
+                playButton.style.opacity = '0';
+            });
+            
+            video.addEventListener('pause', function() {
+                playButton.style.opacity = '0.9';
+            });
+            
+            video.addEventListener('ended', function() {
+                playButton.style.opacity = '0.9';
+            });
+        });
+    </script>
+</body>
+</html>

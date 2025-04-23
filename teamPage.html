@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCC Taekwondo Club</title>
+    <link rel="stylesheet" href="header_footer.css">
+    <link type="image/x-icon" rel="icon" href="logo.png">
+    <style>
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            padding-top: 96px;
+            padding-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.473);
+        }
+        
+        .training {
+            display: flex;
+            font-family: horizon;
+            font-size: 80px;
+            color: rgb(255, 255, 255);
+            text-shadow: 5px 5px #999999;
+            text-align: center;
+        }
+        
+        .container2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 500px;
+            padding: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .peep1, .peep2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 300px;
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .peep1 {
+            background-image: url(northbg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            border-radius: 150px 20px 20px 150px;
+        }
+        
+        .peep2 {
+            background-image: url(southbg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            border-radius: 20px 150px 150px 20px;
+        }
+        
+        .photo1, .photo2, .photo3 {
+            width: 30%;
+            height: auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .photo1 img, .photo2 img, .photo3 img {
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            display: block;
+        }
+        
+        .des {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            padding: 20px;
+        }
+        
+        .name, .name1, .kots, .belt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .name {
+            font-family: horizon;
+            font-size: 60px;
+            color: white;
+            text-shadow: 5px 5px #999999;
+            line-height: 1.1;
+        }
+
+        .name1 {
+            font-family: horizon;
+            font-size: 70px;
+            color: white;
+            text-shadow: 5px 5px #999999;
+            line-height: 1.1;
+        }
+        
+        .kots {
+            font-family: horizon;
+            font-size: 30px;
+            color: white;
+            margin: 10px 0;
+        }
+        
+        .belt {
+            font-family: horizon_outlined;
+            font-size: 27px;
+            color: white;
+        }
+
+        @media (max-width: 1200px) {
+            .photo1 img, .photo2 img, .photo3 img {
+                max-width: 120%;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .name {
+                font-size: 50px;
+            }
+
+            .name1 {
+                font-size: 60px;
+            }
+            
+            .kots {
+                font-size: 24px;
+            }
+            
+            .belt {
+                font-size: 22px;
+            }
+            
+            .photo1 img, .photo2 img, .photo3 img {
+                max-width: 130%;
+            }
+        }
+
+        @media (max-width: 950px) {
+            .name1 {
+                font-size: 50px;
+            }
+            
+            .photo1 img, .photo2 img, .photo3 img {
+                max-width: 140%;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .training {
+                font-size: 65px;
+            }
+            
+            .peep1, .peep2 {
+                min-height: 250px;
+            }
+            
+            .photo1 img, .photo2 img, .photo3 img {
+                max-width: 150%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .training {
+                font-size: 60px;
+                text-shadow: 4px 4px #999999;
+            }
+            
+            .peep1, .peep2 {
+                flex-direction: column;
+                border-radius: 20px;
+                height: auto;
+                padding: 20px;
+                background-attachment: scroll;
+            }
+            
+            .photo1, .photo2, .photo3 {
+                width: 80%;
+                margin: 0;
+                order: 1;
+            }
+            
+            .photo1 img, .photo2 img, .photo3 img {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+            
+            .des {
+                width: 100%;
+                order: 2;
+                padding: 10px 0;
+            }
+            
+            .name {
+                font-size: 40px;
+                text-shadow: 4px 4px #999999;
+            }
+
+            .name1 {
+                font-size: 40px;
+                text-shadow: 4px 4px #999999;
+            }
+            
+            .kots {
+                font-size: 20px;
+            }
+            
+            .belt {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .container1 {
+                padding-top: 110px;
+            }
+            
+            .training {
+                font-size: 50px;
+                text-shadow: 3px 3px #999999;
+            }
+            
+            .name, .name1 {
+                font-size: 36px;
+                text-shadow: 3px 3px #999999;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container1 {
+                padding-top: 110px;
+            }
+            
+            .training {
+                font-size: 40px;
+                text-shadow: 3px 3px #999999;
+            }
+            
+            .container2 {
+                padding: 10px;
+            }
+            
+            .peep1, .peep2 {
+                margin: 10px;
+                min-height: auto;
+            }
+            
+            .name, .name1 {
+                font-size: 32px;
+                text-shadow: 3px 3px #999999;
+            }
+            
+            .kots {
+                font-size: 18px;
+            }
+            
+            .belt {
+                font-size: 16px;
+            }
+            
+            .photo1 img, .photo2 img, .photo3 img {
+                max-width: 200px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .training {
+                font-size: 36px;
+                text-shadow: 2px 2px #999999;
+            }
+            
+            .name, .name1 {
+                font-size: 28px;
+                text-shadow: 2px 2px #999999; 
+            }
+            
+            .kots {
+                font-size: 16px;
+            }
+            
+            .belt {
+                font-size: 14px;
+            }
+            
+            .photo1 img, .photo2 img, .photo3 img {
+                max-width: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="block">
+                <div class="logo"><a href="landingPage.html"><img src="logo.png" alt="UCC Taekwondo Logo"></a></div>
+                <div class="title"><a href="landingPage.html"><b style="color: #ff731c;">UCC </b><b>TAEKWONDO CLUB</b></a></div>
+                <div class="line2"></div>
+                <a href="landingPage.html"><div class="nav">HOME</div></a>
+                <div class="line2"></div>
+                <a href="trainingPage.html"><div class="nav">TRAINING</div></a>
+                <div class="line2"></div>
+                <a href="teamPage.html"><div class="nav">TEAM</div></a>
+                <div class="line2"></div>
+                <a href="NewsPage.html"><div class="nav">NEWS</div></a>
+                <div class="line2"></div>
+                <a href="ContactPage.html"><div class="nav">CONTACT</div></a>
+                <div class="line2"></div>
+                <a href="aboutusPage.html"><div class="nav" style="margin-right: 20px;">ABOUT US</div></a>
+                <div class="mobile-menu-btn">☰</div>
+            </div>
+
+            <div class="mobile-menu">
+                <a href="landingPage.html"><div class="mobile-nav-item">HOME</div></a>
+                <a href="trainingPage.html"><div class="mobile-nav-item">TRAINING</div></a>
+                <a href="teamPage.html"><div class="mobile-nav-item">TEAM</div></a>
+                <a href="NewsPage.html"><div class="mobile-nav-item">NEWS</div></a>
+                <a href="ContactPage.html"><div class="mobile-nav-item">CONTACT</div></a>
+                <a href="aboutusPage.html"><div class="mobile-nav-item">ABOUT US</div></a>
+            </div>
+        </nav>
+    
+        <div class="container1">
+            <div class="training">TEAM</div>
+        </div>
+    </header>
+
+    <div class="container2">
+        <div class="peep1">
+            <div class="photo1">
+                <img src="kotsnorth.png" alt="MJ Rominez Alcaldeza">
+            </div>
+            <div class="des">
+                <div class="name1">Alcaldeza</div>
+                <div class="name">MJ Rominez</div>
+                <div class="kots">UCC-NORTH CAMPUS COACH</div>
+                <div class="belt">BLACK BELT</div>
+            </div>
+        </div>
+
+        <div class="peep2">
+            <div class="des">
+                <div class="name1">Ugay Odan</div>
+                <div class="name">Jay Ar</div>
+                <div class="kots">UCC-SOUTH CAMPUS COACH</div>
+                <div class="belt">BLACK BELT</div>
+            </div>
+            <div class="photo2">
+                <img src="kotssouth.png" alt="Jay Ar Ugay Odan">
+            </div>
+        </div>
+
+        <div class="peep1">
+            <div class="photo3">
+                <img src="capnorth.png" alt="Rafael Aquino">
+            </div>
+            <div class="des">
+                <div class="name1">Aquino</div>
+                <div class="name">Rafael</div>
+                <div class="kots">UCC-NORTH TEAM CAPTAIN</div>
+                <div class="belt">BROWN BELT</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="block2">
+            <div class="logo2">
+                <a href="https://ucc-caloocan.edu.ph/" target="_blank"><img src="ucc.png" alt="UCC Logo"></a>
+            </div>
+            <div class="subblock1">
+                <div class="note1">
+                    <a href="https://ucc-caloocan.edu.ph/" target="_blank">
+                        <div class="uni"><b>UNIVERSITY OF</b></div>
+                        <div class="city"><b>CALOOCAN CITY</b></div>
+                    </a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="logo3">
+                <a href="landingPage.html"><img src="logo.png" alt="Taekwondo Logo"></a>
+            </div>
+            <div class="subblock">
+                <div class="note2">
+                    <a href="landingPage.html"><b style="color: #ff731c;">UCC </b><b>TAEKWONDO CLUB</b></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">COPYRIGHT © 2025 UCC TAEKWONDO CLUB</div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>
