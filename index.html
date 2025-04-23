@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UCC Taekwondo Club</title>
     <link rel="stylesheet" href="header_footer.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link type="image/x-icon" rel="icon" href="logo.png">
     <style>
         .container1 {
@@ -112,46 +111,63 @@
             background-attachment: fixed;
         }
         
-        .mySwiper {
-            max-width: 1200px;
-            width: 100%;
-            padding: 40px 0;
-        }
-
-        .swiper-slide {
-            font-size: 18px;
-            width: 600px;
-        }
-
-        .box {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .box img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .box span {
-            position: absolute;
-            font-family: horizon;
-            text-align: center;
-            color: white;
-            font-size: 50px;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-
-        .swiper-pagination-bullet {
-            background: white;
-            width: 9px;
-            height: 9px;
-        }
+        .grid-gallery {
+        max-width: 1200px;
+        width: 95%;
+        margin: 40px auto;
+        padding: 20px 0;
+    }
+    
+    .top-row, .bottom-row {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .grid-item {
+        flex: 1;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .grid-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        height: 220px;
+    }
+    
+    .box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .grid-item:hover .box img {
+        transform: scale(1.1);
+    }
+    
+    .box span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: horizon, sans-serif;
+        text-align: center;
+        color: white;
+        font-size: 36px;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        z-index: 1;
+        width: 100%;
+    }
         
         .promotional {
             display: flex;
@@ -403,6 +419,15 @@
                 margin-top: 10px;
             }
         }
+
+        @media screen and (max-width: 900px) {
+            .box {
+                height: 180px;
+            }
+            
+            .box span {
+                font-size: 30px;
+        }
         
         @media screen and (max-width: 830px) {
             .text1, .text2, .text3 {
@@ -444,8 +469,16 @@
                 height: 250px;
             }
             
-            .swiper-slide {
-                width: 400px;
+            .top-row, .bottom-row {
+                gap: 15px;
+            }
+            
+            .box {
+                height: 160px;
+            }
+            
+            .box span {
+                font-size: 26px;
             }
             
             .slogan {
@@ -569,12 +602,16 @@
                 height: 200px;
             }
             
-            .swiper-slide {
-                width: 300px;
+            .top-row {
+            flex-direction: column;
             }
             
-            .box span {
-                font-size: 30px;
+            .bottom-row {
+                flex-direction: column;
+            }
+            
+            .grid-item {
+                margin-bottom: 15px;
             }
             
             .sub1 {
@@ -857,42 +894,42 @@
         </div>
     </div>
     
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <a href="trainingPage.html" class="swiper-slide">
-                <div class="box">
-                    <img src="thursday.jpg" alt="Training">
-                    <span>TRAINING</span>
-                </div>
-            </a>
-            <a href="aboutusPage.html" class="swiper-slide">
-                <div class="box">
-                    <img src="news1.jpg" alt="About Us">
-                    <span>ABOUT US</span>
-                </div>
-            </a>
-            <a href="NewsPage.html" class="swiper-slide">
-                <div class="box">
-                    <img src="news2.jpg" alt="News">
-                    <span>NEWS</span>
-                </div>
-            </a>
-            <a href="teamPage.html" class="swiper-slide">
-                <div class="box">
-                    <img src="about.jpg" alt="Team">
-                    <span>TEAM</span>
-                </div>
-            </a>
-            <a href="ContactPage.html" class="swiper-slide">
-                <div class="box">
-                    <img src="contact.jpg" alt="Contact">
-                    <span>CONTACT</span>
-                </div>
-            </a>
-        </div>
-            
-        <div class="swiper-pagination"></div>
-    </div>    
+<div class="grid-gallery">
+    <div class="top-row">
+        <a href="trainingPage.html" class="grid-item">
+            <div class="box">
+                <img src="thursday.jpg" alt="Training">
+                <span>TRAINING</span>
+            </div>
+        </a>
+        <a href="aboutusPage.html" class="grid-item">
+            <div class="box">
+                <img src="news1.jpg" alt="About Us">
+                <span>ABOUT US</span>
+            </div>
+        </a>
+        <a href="NewsPage.html" class="grid-item">
+            <div class="box">
+                <img src="news2.jpg" alt="News">
+                <span>NEWS</span>
+            </div>
+        </a>
+    </div>
+    <div class="bottom-row">
+        <a href="teamPage.html" class="grid-item">
+            <div class="box">
+                <img src="about.jpg" alt="Team">
+                <span>TEAM</span>
+            </div>
+        </a>
+        <a href="ContactPage.html" class="grid-item">
+            <div class="box">
+                <img src="contact.jpg" alt="Contact">
+                <span>CONTACT</span>
+            </div>
+        </a>
+    </div>
+</div>
     
     <footer>
     <div class="block2">
